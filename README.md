@@ -96,23 +96,54 @@ The dataset `Temperature_vs_IceCreamSales.csv` contains 7 data points:
 ### Prerequisites
 - **Python 3.7 or higher**
 - **pip** (Python package manager)
+- **Git** (for cloning the repository)
 
 ### Step-by-Step Installation
 
-1. **Clone or download the project:**
+#### Option 1: Clone from GitHub (Recommended)
+
+1. **Clone the repository:**
    ```bash
-   cd Polynomial_Regression_Project
+   git clone https://github.com/Venkatatejadegala/Sales-Prediction.git
    ```
 
-2. **Install required packages:**
+2. **Navigate to the project directory:**
+   ```bash
+   cd Sales-Prediction
+   ```
+
+3. **Install required packages:**
    ```bash
    pip install -r requirements.txt
    ```
 
-3. **Verify installation:**
+4. **Verify installation:**
    ```bash
    python -c "import streamlit; print('Streamlit installed successfully!')"
    ```
+
+#### Option 2: Download ZIP
+
+1. **Download the repository:**
+   - Go to [https://github.com/Venkatatejadegala/Sales-Prediction](https://github.com/Venkatatejadegala/Sales-Prediction)
+   - Click the green "Code" button
+   - Select "Download ZIP"
+   - Extract the ZIP file
+
+2. **Navigate to the project directory:**
+   ```bash
+   cd Sales-Prediction
+   ```
+
+3. **Install required packages:**
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+#### Quick Setup (One Command)
+```bash
+git clone https://github.com/Venkatatejadegala/Sales-Prediction.git && cd Sales-Prediction && pip install -r requirements.txt
+```
 
 ---
 
@@ -388,8 +419,28 @@ For issues or questions:
 
 ## 🚀 Quick Start
 
+### For New Users (Clone from GitHub)
+
 ```bash
-# 1. Install dependencies
+# 1. Clone the repository
+git clone https://github.com/Venkatatejadegala/Sales-Prediction.git
+
+# 2. Navigate to project directory
+cd Sales-Prediction
+
+# 3. Install dependencies
+pip install -r requirements.txt
+
+# 4. Run the application
+python run_app.py
+
+# 5. Use the app in Chrome (opens automatically)
+```
+
+### For Existing Users
+
+```bash
+# 1. Install dependencies (if not already installed)
 pip install -r requirements.txt
 
 # 2. Run the application
@@ -399,6 +450,9 @@ python run_app.py
 ```
 
 **That's it!** The application will open in your browser and you can start predicting ice cream sales! 🍦
+
+### Repository Link
+🔗 **GitHub:** [https://github.com/Venkatatejadegala/Sales-Prediction](https://github.com/Venkatatejadegala/Sales-Prediction)
 
 ---
 
