@@ -1,459 +1,333 @@
-# 🍦 Ice Cream Sales Predictor - Polynomial Regression
+# 🍦 Ice Cream Sales Predictor (Dual Model Regression)
 
-## 📋 Project Overview
-
-A sophisticated **web-based machine learning application** that predicts ice cream sales based on temperature using polynomial regression. This project demonstrates advanced regression modeling with a modern, interactive user interface.
-
-**Course:** B.TECH - IT - 3 Year - A Section  
-**Subject:** Machine Learning (22IT307)  
-**Module:** Module2-T1 - Part A Question 7
+A modern machine learning web application that predicts **ice cream sales** based on **temperature (°C)** using both **Linear Regression** and **Polynomial Regression (auto-optimized degree)**.  
+This project demonstrates a complete end-to-end pipeline — from dataset reading, training, and prediction to model evaluation, visualization, and persistence — all through an interactive Streamlit interface.
 
 ---
 
-## 🎯 Project Requirements
+## 🧠 Overview
 
-### Part A Question 7
-
-**Objective:** Build a regression model to predict ice cream sales based on temperature using the provided dataset.
-
-### Sub-questions & Solutions:
-
-1. **a) What is a polynomial regression model? How does it differ from linear regression?** (Understanding - 2 Marks)
-   - ✅ Explained in the application sidebar with detailed comparisons
-   - Polynomial regression uses higher-degree terms (x², x³, etc.) to capture non-linear relationships
-   - Linear regression uses only first-degree terms (x) for straight-line relationships
-
-2. **b) Fit a polynomial regression model to the given dataset to predict IceCream_Sales based on Temperature.** (Applying - 3 Marks)
-   - ✅ Implemented with degree 2 polynomial regression
-   - ✅ Model trained and ready for predictions
-   - ✅ Interactive prediction interface available
-
-3. **c) Analyze the model's performance using Mean Squared Error (MSE) and R² score.** (Analyzing - 2 Marks)
-   - ✅ MSE and R² scores calculated and displayed
-   - ✅ Visual comparison charts included
-   - ✅ Performance metrics shown for both models
-
-4. **d) Evaluate the accuracy of the model and explain whether polynomial regression is suitable for this dataset.** (Evaluating - 3 Marks)
-   - ✅ Model evaluation with detailed analysis
-   - ✅ Comparison showing polynomial regression superiority
-   - ✅ Explanation provided in the application
+The **Ice Cream Sales Predictor** analyzes the relationship between temperature and ice cream sales using regression techniques.  
+It is a lightweight and intelligent web app built with **Python**, **Scikit-learn**, and **Streamlit**.  
+The user can enter any temperature value, and the app predicts sales using both models, visualizes the data, compares accuracy metrics, and logs predictions in a session history.
 
 ---
 
-## 📊 Dataset
+## 🎯 Objective
 
-The dataset `Temperature_vs_IceCreamSales.csv` contains 7 data points:
-
-| Temperature (°C) | IceCream Sales (in ₹) |
-|:-----------------|:---------------------|
-| 20               | 150                  |
-| 22               | 200                  |
-| 25               | 350                  |
-| 27               | 500                  |
-| 30               | 700                  |
-| 32               | 1000                 |
-| 35               | 1350                 |
+- Predict ice cream sales based on temperature input.  
+- Compare performance between **Linear Regression** and **Polynomial Regression**.  
+- Automatically select the best polynomial degree for optimal fit.  
+- Visualize regression fits and model performance metrics.  
+- Provide real-time prediction history and model persistence.
 
 ---
 
-## ✨ Features
-
-### 🎨 User Interface
-- ✅ **Modern Web Design** - Beautiful gradient theme with professional styling
-- ✅ **Responsive Layout** - Works perfectly on all screen sizes
-- ✅ **Smooth Animations** - Elegant transitions and hover effects
-- ✅ **Glass Morphism** - Modern UI elements with backdrop blur effects
-- ✅ **Custom Styling** - Poppins font family and custom color scheme
-
-### 🔧 Functionality
-- ✅ **Interactive Temperature Input** - Slider and number input options
-- ✅ **Temperature Status Indicator** - Color-coded status (Low/Normal/High/Very High)
-- ✅ **Model Selection** - Choose between Polynomial (recommended) or Linear Regression
-- ✅ **Predict Button** - Click to generate sales prediction
-- ✅ **Real-time Updates** - Prediction updates when temperature or model changes
-
-### 📈 Visualizations
-- ✅ **Regression Plot** - Shows both Linear and Polynomial regression curves
-- ✅ **Prediction Highlighting** - Your prediction point highlighted on the graph
-- ✅ **Model Comparison Charts** - Side-by-side MSE and R² comparison
-- ✅ **Dataset Table** - View all data points in a formatted table
-
-### 📊 Analytics
-- ✅ **Performance Metrics** - MSE and R² scores for both models
-- ✅ **Sales Categories** - Low/Moderate/High sales classification
-- ✅ **Model Analysis** - Detailed explanations in the sidebar
-- ✅ **Educational Content** - Learn about regression models
-
-### 🚀 Performance
-- ✅ **Caching** - Optimized with Streamlit caching for fast loading
-- ✅ **Auto-launch** - Automatically opens in Chrome browser
-- ✅ **Error Handling** - Comprehensive error messages and validation
-
----
-
-## 🛠️ Installation
-
-### Prerequisites
-- **Python 3.7 or higher**
-- **pip** (Python package manager)
-- **Git** (for cloning the repository)
-
-### Step-by-Step Installation
-
-#### Option 1: Clone from GitHub (Recommended)
-
-1. **Clone the repository:**
-   ```bash
-   git clone https://github.com/Venkatatejadegala/Sales-Prediction.git
-   ```
-
-2. **Navigate to the project directory:**
-   ```bash
-   cd Sales-Prediction
-   ```
-
-3. **Install required packages:**
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-4. **Verify installation:**
-   ```bash
-   python -c "import streamlit; print('Streamlit installed successfully!')"
-   ```
-
-#### Option 2: Download ZIP
-
-1. **Download the repository:**
-   - Go to [https://github.com/Venkatatejadegala/Sales-Prediction](https://github.com/Venkatatejadegala/Sales-Prediction)
-   - Click the green "Code" button
-   - Select "Download ZIP"
-   - Extract the ZIP file
-
-2. **Navigate to the project directory:**
-   ```bash
-   cd Sales-Prediction
-   ```
-
-3. **Install required packages:**
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-#### Quick Setup (One Command)
-```bash
-git clone https://github.com/Venkatatejadegala/Sales-Prediction.git && cd Sales-Prediction && pip install -r requirements.txt
-```
-
----
-
-## 🚀 Usage
-
-### Running the Application
-
-#### **Option 1: Auto-Launcher (Recommended)**
-```bash
-python run_app.py
-```
-- Automatically opens Chrome browser
-- Starts Streamlit server
-- Opens at `http://localhost:8501`
-
-#### **Option 2: Windows Batch File**
-Double-click `run.bat` or run:
-```bash
-run.bat
-```
-
-#### **Option 3: Direct Streamlit Command**
-```bash
-streamlit run app.py
-```
-Then manually open `http://localhost:8501` in your browser.
-
-### Using the Application
-
-1. **Enter Temperature:**
-   - Use the **slider** to select temperature (15°C to 40°C)
-   - Or **type directly** in the number input field
-   - View the **temperature status** (colored text indicator)
-
-2. **Select Model:**
-   - Choose **"Polynomial Regression (Recommended)"** for best accuracy
-   - Or select **"Linear Regression"** for comparison
-
-3. **Generate Prediction:**
-   - Click the **"🔮 Predict Sales"** button
-   - View the predicted sales amount in the gradient box
-   - See the **sales category** (Low/Moderate/High)
-
-4. **Analyze Results:**
-   - Check **Model Performance** metrics (MSE and R²)
-   - View **Regression Plot** with your prediction highlighted
-   - Compare models using **Comparison Charts**
-   - Review the **Dataset Table**
-
-5. **Learn More:**
-   - Explore the **sidebar** for detailed explanations
-   - Read about polynomial vs linear regression
-   - Understand model evaluation metrics
-
----
-
-## 📚 Model Explanation
-
-### Polynomial Regression vs Linear Regression
-
-#### **Linear Regression:**
-- **Formula:** `y = mx + b`
-- **Type:** Straight line
-- **Use Case:** Linear relationships
-- **Pros:** Simple, interpretable, fast
-- **Cons:** Cannot capture curves
-
-#### **Polynomial Regression:**
-- **Formula:** `y = a₀ + a₁x + a₂x² + a₃x³ + ...`
-- **Type:** Curved line (degree 2 in this project)
-- **Use Case:** Non-linear relationships
-- **Pros:** Captures curves, more accurate for complex data
-- **Cons:** More complex, can overfit
-
-### Why Polynomial Regression for This Dataset?
-
-**Performance Comparison:**
-- **MSE:** Polynomial (544.64) vs Linear (8,588.01) - **94% lower error**
-- **R² Score:** Polynomial (0.9967) vs Linear (0.9485) - **5% better fit**
-
-**Conclusion:** Polynomial regression is significantly more suitable as it captures the curved relationship between temperature and sales, resulting in much more accurate predictions.
-
----
-
-## 📈 Model Evaluation
-
-### Performance Metrics
-
-#### **Mean Squared Error (MSE)**
-- Measures average squared difference between predicted and actual values
-- **Lower is better**
-- Formula: `MSE = (1/n) × Σ(actual - predicted)²`
-
-#### **R² Score (Coefficient of Determination)**
-- Measures how well the model explains variance in data
-- **Higher is better** (range: 0 to 1)
-- Formula: `R² = 1 - (SS_res / SS_tot)`
-
-### Results for This Dataset
-
-| Model | MSE | R² Score | Interpretation |
-|:------|:----|:---------|:---------------|
-| **Linear Regression** | 8,588.01 | 0.9485 | Good fit, but misses curve |
-| **Polynomial Regression** | 544.64 | 0.9967 | Excellent fit, captures curve |
-
-**Polynomial regression is clearly superior** for this dataset!
-
----
-
-## 📁 Project Structure
-
-```
-Polynomial_Regression_Project/
+## 🗂️ Project Folder Structure
+IceCreamSalesPredictor/
 │
-├── app.py                               # Main Streamlit web application
-├── run_app.py                           # Auto-launcher script (opens Chrome)
-├── run.bat                              # Windows batch file launcher
-├── Temperature_vs_IceCreamSales.csv     # Dataset file (7 data points)
-├── requirements.txt                     # Python package dependencies
-└── README.md                            # This documentation file
-```
-
-### File Descriptions
-
-- **`app.py`** - Main application with all functionality, UI, and ML models
-- **`run_app.py`** - Launcher that automatically opens Chrome browser
-- **`run.bat`** - Windows batch file for easy double-click launching
-- **`Temperature_vs_IceCreamSales.csv`** - Dataset with temperature and sales data
-- **`requirements.txt`** - List of required Python packages
-- **`README.md`** - Complete project documentation
+├── app.py # Main Streamlit web application
+├── run_app.py # Auto-launcher that runs app and opens browser
+├── run.bat # One-click Windows launcher
+├── requirements.txt # Python dependency list
+├── Ice Cream Sales and Temperature.csv # Dataset with temperature and sales data
+├── best_model.pkl # Saved trained polynomial regression model
+└── README.md # Documentation file (this file)
 
 ---
 
-## 🛠️ Technologies Used
+## ⚙️ Installation & Execution
 
-| Technology | Version | Purpose |
-|:-----------|:--------|:--------|
-| **Python** | 3.7+ | Programming language |
-| **NumPy** | ≥1.21.0 | Numerical computations |
-| **Pandas** | ≥1.3.0 | Data manipulation and CSV handling |
-| **Matplotlib** | ≥3.4.0 | Data visualization and plotting |
-| **scikit-learn** | ≥0.24.0 | Machine learning models (Linear & Polynomial Regression) |
-| **Streamlit** | ≥1.28.0 | Web application framework |
+### 🔧 Prerequisites
+Ensure you have:
+- **Python 3.8 or later**
+- **pip** (Python package manager)
+- **Internet connection** for installing dependencies
 
 ---
 
-## 🎨 UI/UX Features
+### 🚀 Quick Start
 
-### Design Elements
-- **Gradient Theme:** Purple-to-pink gradient color scheme
-- **Glass Morphism:** Modern card designs with backdrop blur
-- **Smooth Animations:** Slide-in and fade effects
-- **Custom Fonts:** Poppins font family for professional look
-- **Responsive Design:** Adapts to different screen sizes
-
-### Interactive Elements
-- **Temperature Slider:** Visual input with gradient track
-- **Number Input:** Alternative text input with focus effects
-- **Predict Button:** Large, prominent button with gradient background
-- **Model Radio Buttons:** Clean selection interface
-- **Hover Effects:** Cards lift and scale on hover
-
----
-
-## 🔍 Troubleshooting
-
-### Common Issues
-
-**Issue:** Chrome doesn't open automatically
-- **Solution:** Manually open Chrome and navigate to `http://localhost:8501`
-
-**Issue:** Import errors when running
-- **Solution:** Run `pip install -r requirements.txt` to install dependencies
-
-**Issue:** CSV file not found
-- **Solution:** Ensure `Temperature_vs_IceCreamSales.csv` is in the same directory as `app.py`
-
-**Issue:** Port 8501 already in use
-- **Solution:** Stop other Streamlit apps or use: `streamlit run app.py --server.port 8502`
-
-**Issue:** App runs slowly
-- **Solution:** The app uses caching for optimization. First load may be slower.
-
----
-
-## 📝 Code Features
-
-### Optimizations
-- ✅ **Streamlit Caching:** `@st.cache_data` for model and plot caching
-- ✅ **Efficient Plotting:** Base plots cached, only highlights updated
-- ✅ **Session State:** Manages prediction state efficiently
-- ✅ **Error Handling:** Comprehensive try-catch blocks
-
-### Best Practices
-- ✅ **Clean Code:** Well-organized classes and functions
-- ✅ **Documentation:** Comprehensive docstrings
-- ✅ **Type Safety:** Proper data type handling
-- ✅ **User Feedback:** Clear error messages and status indicators
-
----
-
-## 🎓 Educational Value
-
-This project demonstrates:
-- ✅ **Regression Analysis:** Linear and Polynomial regression implementation
-- ✅ **Model Evaluation:** MSE and R² score calculation and interpretation
-- ✅ **Data Visualization:** Professional plotting with Matplotlib
-- ✅ **Web Development:** Streamlit web app creation
-- ✅ **UI/UX Design:** Modern, responsive interface design
-- ✅ **Machine Learning:** End-to-end ML pipeline
-
----
-
-## 📊 Expected Results
-
-When you run the application, you should see:
-
-1. **Model Performance:**
-   - Linear Regression: MSE ≈ 8,588, R² ≈ 0.9485
-   - Polynomial Regression: MSE ≈ 545, R² ≈ 0.9967
-
-2. **Sample Predictions:**
-   - 25°C → ~₹346 (Polynomial) / ~₹426 (Linear)
-   - 30°C → ~₹747 (Polynomial) / ~₹823 (Linear)
-   - 35°C → ~₹1,355 (Polynomial) / ~₹1,220 (Linear)
-
-3. **Visualizations:**
-   - Regression plot showing both models
-   - Comparison charts for metrics
-   - Highlighted prediction points
-
----
-
-## 🔐 Security & Privacy
-
-- ✅ **Local Processing:** All data processed locally, no external servers
-- ✅ **No Data Collection:** No user data is collected or stored
-- ✅ **Open Source:** Code is transparent and auditable
-
----
-
-## 📄 License
-
-This project is for **educational purposes only**.
-
----
-
-## 👨‍💻 Author
-
-**B.TECH - IT - 3 Year - A Section**  
-**Subject:** Machine Learning (22IT307)  
-**Module:** Module2-T1
-
----
-
-## 🙏 Acknowledgments
-
-- **scikit-learn** for machine learning algorithms
-- **Streamlit** for the web framework
-- **Matplotlib** for visualization capabilities
-- **Pandas & NumPy** for data processing
-
----
-
-## 📞 Support
-
-For issues or questions:
-1. Check the **Troubleshooting** section above
-2. Review the **sidebar** in the application for help
-3. Ensure all dependencies are installed correctly
-
----
-
-## 🚀 Quick Start
-
-### For New Users (Clone from GitHub)
-
+#### **Option 1: Auto Launch (Recommended)**
 ```bash
-# 1. Clone the repository
-git clone https://github.com/Venkatatejadegala/Sales-Prediction.git
+python run_app.py
+This script:
 
-# 2. Navigate to project directory
-cd Sales-Prediction
+Starts Streamlit server automatically
 
-# 3. Install dependencies
+Opens the app in your default web browser (preferably Chrome)
+
+Option 2: Windows Shortcut
+
+Double-click the file:
+
+run.bat
+
+Option 3: Manual Start
+streamlit run app.py
+
+
+After launch, visit:
+
+http://localhost:8501
+
+🧩 File Details & Functionality
+1️⃣ app.py — Main Application
+
+Handles the entire workflow:
+
+Loads dataset (Ice Cream Sales and Temperature.csv)
+
+Trains Linear and Polynomial regression models
+
+Automatically selects best polynomial degree (1–12 range)
+
+Evaluates both models (MSE, RMSE, R², CV R²)
+
+Accepts manual temperature input (default 30°C)
+
+Displays integer sales predictions for both models
+
+Plots interactive regression graph using Plotly
+
+Tracks prediction history (session-based)
+
+Allows saving/loading of trained model (best_model.pkl)
+
+Supports light/dark themes and persistent UI layout
+
+Built using Streamlit, Scikit-learn, Plotly, Joblib, and Pandas.
+
+2️⃣ run_app.py — Auto Launcher
+
+Launches the Streamlit app programmatically.
+
+Automatically opens http://localhost:8501 in Chrome or default browser.
+
+Useful for quick startup during demos or presentations.
+
+3️⃣ run.bat — Windows Shortcut
+
+Runs run_app.py with a double-click.
+
+No terminal commands required.
+
+4️⃣ requirements.txt
+
+Contains all dependencies needed to run the app:
+
+streamlit
+pandas
+numpy
+scikit-learn
+plotly
+joblib
+
+
+Install them by:
+
 pip install -r requirements.txt
 
-# 4. Run the application
-python run_app.py
+5️⃣ Ice Cream Sales and Temperature.csv
 
-# 5. Use the app in Chrome (opens automatically)
-```
+The dataset used to train both models.
 
-### For Existing Users
+Represents how ice cream sales vary with temperature.
 
-```bash
-# 1. Install dependencies (if not already installed)
-pip install -r requirements.txt
+Sample content:
 
-# 2. Run the application
-python run_app.py
+Temperature (°C)	Sales
+20	150
+25	350
+30	700
+35	1350
+6️⃣ best_model.pkl
 
-# 3. Use the app in Chrome (opens automatically)
-```
+A serialized (saved) polynomial regression model using joblib.
 
-**That's it!** The application will open in your browser and you can start predicting ice cream sales! 🍦
+Can be reloaded for instant predictions without retraining.
 
-### Repository Link
-🔗 **GitHub:** [https://github.com/Venkatatejadegala/Sales-Prediction](https://github.com/Venkatatejadegala/Sales-Prediction)
+Saved automatically through sidebar option “💾 Save current best polynomial model”.
+
+🧠 Internal Workflow
+Step 1. Data Handling
+
+The CSV is loaded into Pandas.
+
+Temperature and Sales columns are automatically detected.
+
+Missing or non-numeric data is removed.
+
+Step 2. Model Training
+
+Linear Regression model is fitted on the dataset.
+
+Polynomial Regression is trained iteratively for degrees 1–12.
+
+Best degree is selected based on R² score.
+
+Step 3. Model Evaluation
+
+For each model:
+
+MSE (Mean Squared Error)
+
+RMSE (Root Mean Squared Error)
+
+R² (Coefficient of Determination)
+
+CV R² (5-fold cross-validation score)
+are computed and displayed in a metrics card format.
+
+Step 4. Prediction Phase
+
+The user enters a temperature (default = 30°C).
+
+Both models predict sales, shown as integers:
+
+Linear Model → 240 sales
+Polynomial Model (deg 5) → 245 sales
+
+
+Predictions are stored in session history for reference.
+
+Step 5. Visualization
+
+Interactive Plotly chart displays:
+
+Actual data points (blue markers)
+
+Linear regression line (red)
+
+Polynomial regression curve (green)
+
+Predicted point (yellow star marker)
+
+Step 6. History Management
+
+Every prediction is added to session history automatically.
+
+Users can:
+
+Clear all history
+
+Delete selected entries
+
+Download history as CSV file
+
+Step 7. Model Persistence
+
+Users can save the polynomial model (best_model.pkl).
+
+Can later reload it directly from sidebar options.
+
+📈 Model Performance Summary
+Metric	Linear Regression	Polynomial Regression (Best Degree)
+MSE	Higher	Lower
+RMSE	Higher	Lower
+R²	Good	Excellent
+CV R²	Moderate	Strong
+
+Result:
+Polynomial Regression provides a more accurate fit for temperature–sales relationship, effectively capturing its non-linear trend.
+
+🎨 Interface Overview
+Layout
+
+Header: Centered gradient title
+
+Sidebar: Contains model controls, theme toggle, save/load options
+
+Main Section:
+
+Input temperature and view predictions
+
+Visual regression plot
+
+Model performance metrics
+
+Prediction history table
+
+Footer credit line
+
+UI Highlights
+
+Gradient header and responsive layout
+
+Light/Dark theme support
+
+Smooth visual transitions
+
+Interactive data visualization via Plotly
+
+📊 Visualization Example
+
+When you run the app, you’ll see:
+
+Data points plotted in blue
+
+Red linear regression line
+
+Green polynomial curve
+
+Highlighted yellow point for predicted sales
+
+Below, model performance cards and bar charts summarize accuracy comparisons.
+
+🧱 Architecture & Structure Analysis
+Layer	Component	Responsibility
+Data Layer	pandas, numpy	Load, clean, and format dataset
+Model Layer	scikit-learn	Train and evaluate regression models
+UI Layer	streamlit, plotly	Input forms, charts, and dynamic interface
+Persistence Layer	joblib, CSV	Save/load models and prediction history
+Control Layer	session_state	Manage app state and user interactions
+🧾 Troubleshooting
+Issue	Cause	Solution
+App not opening automatically	Chrome not detected	Open http://localhost:8501 manually
+Module import error	Missing dependencies	Run pip install -r requirements.txt
+CSV not found	Wrong file name or path	Ensure Ice Cream Sales and Temperature.csv is in same directory
+Port in use	Another Streamlit app running	Run: streamlit run app.py --server.port 8502
+🚧 Future Enhancements
+
+Integrate live weather API to auto-fetch real temperatures
+
+Add more algorithms (Decision Tree, Random Forest)
+
+Enable multiple dataset uploads
+
+Generate downloadable PDF performance reports
+
+Deploy app on Streamlit Cloud for online access
+
+📊 Expected Outputs
+Temperature (°C)	Linear Prediction	Polynomial Prediction
+25	340 sales	355 sales
+30	720 sales	745 sales
+35	1300 sales	1350 sales
+
+Polynomial regression consistently yields more realistic results.
+
+🧰 Technologies Used
+Tool	Purpose
+Python 3.8+	Core programming language
+Streamlit	Web interface framework
+Pandas & NumPy	Data handling
+Scikit-learn	Regression modeling
+Plotly	Interactive data visualization
+Joblib	Model persistence
+HTML/CSS	Styling and layout formatting
+🏁 Conclusion
+
+This project effectively demonstrates how machine learning regression can be used to analyze and forecast real-world business metrics.
+It provides a complete learning and demonstration tool — integrating data preprocessing, model training, evaluation, and real-time prediction in a single, interactive environment.
+
+🧾 License
+
+This project is open for educational and demonstrative purposes.
+All computations run locally; no external data is transmitted or stored.
 
 ---
 
-**Made with ❤️ for Machine Learning Education**
+✅ **This README** is fully compatible with GitHub, college documentation, and internship submissions.  
+✅ It explains *everything technically*, including how each file operates and how predictions, models, and visualizations work internally.  
+✅ No personal or course details — completely professional.

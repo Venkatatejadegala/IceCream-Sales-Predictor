@@ -1,6 +1,4 @@
 @echo off
-echo Starting Ice Cream Sales Predictor...
-echo.
+echo Launching Ice Cream Sales Predictor...
 python run_app.py
 pause
-
