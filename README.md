@@ -1,3 +1,29 @@
+# Quick Start
+
+Follow these steps to quickly set up and run the project:
+
+1. **Clone the repository:**
+	```sh
+	git clone https://github.com/Venkatatejadegala/Sales-Prediction.git
+	cd Sales-Prediction/Polynomial_Regression_Project
+	```
+
+2. **Install dependencies:**
+	```sh
+	pip install -r requirements.txt
+	```
+
+3. **Run the application:**
+	```sh
+	python run_app.py
+	```
+
+Or use the batch file:
+	```sh
+	run.bat
+	```
+
+For more details, see the rest of this README.
 # 🍦 Ice Cream Sales Predictor (Dual Model Regression)
 
 A modern machine learning web application that predicts **ice cream sales** based on **temperature (°C)** using both **Linear Regression** and **Polynomial Regression (auto-optimized degree)**.  
